@@ -128,13 +128,30 @@ function renderExpenseChart() {
 }
 
 function setupNavigation() {
-    document.getElementById('nav-home').addEventListener('click', showHomePage);
-    document.getElementById('nav-income').addEventListener('click', showIncomePage);
-    document.getElementById('nav-categories').addEventListener('click', showCategoryManagementPage);
-    document.getElementById('nav-search').addEventListener('click', showSearchPage);
-    document.getElementById('nav-settings').addEventListener('click', showSettingsPage);
+    document.getElementById('main-nav').addEventListener('click', function(e) {
+        if(e.target.tagName === 'A') {
+            e.preventDefault();
+            const page = e.target.getAttribute('href').substring(1);
+            switch(page) {
+                case 'home':
+                    showHomePage();
+                    break;
+                case 'income':
+                    showIncomePage();
+                    break;
+                case 'categories':
+                    showCategoryManagementPage();
+                    break;
+                case 'search':
+                    showSearchPage();
+                    break;
+                case 'settings':
+                    showSettingsPage();
+                    break;
+            }
+        }
+    });
 }
-
 function showCategoryManagementPage() {
     // Implement this function
 }
