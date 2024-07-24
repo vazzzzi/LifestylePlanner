@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#007aff">
+<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Budget Planner</h1>
+            <p id="surplus">Surplus: $27,110</p>
+        </header>
+        <nav>
+            <ul id="main-nav">
+                <li><a href="#" id="nav-home">Home</a></li>
+                <li><a href="#" id="nav-income">Income</a></li>
+                <li><a href="#" id="nav-categories">Categories</a></li>
+                <li><a href="#" id="nav-search">Search</a></li>
+                <li><a href="#" id="nav-settings">Settings</a></li>
+            </ul>
+        </nav>
+        <main id="main-content"></main>
+    </div>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/app.js"></script>
+</body><script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/scripts/service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registered successfully:', registration.scope);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+    });
+  }
+</script>
+</html>

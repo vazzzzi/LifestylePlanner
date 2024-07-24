@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #007aff;
+    --background-color: #f2f2f7;
+    --text-color: #000000;
+    --border-color: #c7c7cc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#app {
+    max-width: 414px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul#main-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+}
+
+nav ul#main-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul#main-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.category-detail h2 {
+    margin-bottom: 15px;
+}
+
+.subcategory {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart-container {
+    margin-top: 20px;
+}
+
+.data-management {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.data-management button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.data-management button:hover {
+    background-color: #0056b3;
+}
+
+.income-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.income-item button {
+    margin-left: 10px;
+}
+
+#add-income {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-income:hover {
+    background-color: #0056b3;
+}
